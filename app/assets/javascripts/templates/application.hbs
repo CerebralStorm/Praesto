@@ -1,9 +1,11 @@
-<ul>
-  <li>{{#linkTo 'index'}}Home{{/linkTo}}</li>
-  <li>{{#linkTo 'workouts'}}Workout{{/linkTo}}</li>
-  <li>{{!#linkTo}}Sign Up{{!/linkTo}}</li>
-</ul>
+{{partial "header"}}
 <div="container">
-  <h1>Praesto</h1>
-  {{outlet}}
+  <div class="row">
+  <div class="col-md-2"></div>
+  <div class="col-md-8">
+    <h1>Praesto</h1>
+    {{outlet}}
+  </div>
+  <div class="col-md-2"></div>
 </div>
+{{partial "footer"}}

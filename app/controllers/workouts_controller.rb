@@ -6,28 +6,19 @@ class WorkoutsController < ApplicationController
   end
 
   def show
-    # respond_with Workout.find(workout_params)
+    respond_with Workout.find(params[:id])
   end
 
   def create
-    # workout = Workout.create(workout_params)
-    # if workout.save
-    #   render json: workout, status: :created
-    # else
-    #   respond_with json: workout
-    # end
+    respond_with workout = Workout.create(workout_params)
   end
 
   def update
-    # workout = Workout.find(workout_params)
-    # if workout.update_attributes(workout_params)
-    #   render json: workout, status: :updated
-    # else
-    #   respond_with json: workout
-    # end
+    respond_with Workout.update(params[:id], workout_params)
   end
 
   def destroy
+    respond_with Post.destroy(params[:id])
   end
 
   private

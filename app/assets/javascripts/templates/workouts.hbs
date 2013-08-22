@@ -5,7 +5,7 @@
 
 <ul>
   {{#each workout in controller}}
-    <li>{{location}} - {{date}}</li>
+    <li>{{#linkTo "workouts.workout" workout}}{{workout.location}} - {{workout.date}}{{/linkTo}}</li>
   {{else}}
     <li>You don't have any workouts logged.</li>
   {{/each}}
