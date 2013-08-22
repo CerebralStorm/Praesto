@@ -1,0 +1,12 @@
+<h2>Workouts</h2>
+{{outlet}}
+
+<h3>{{#linkTo "workouts.new"}}Log new workout{{/linkTo}}</h3>
+
+<ul>
+  {{#each workout in controller}}
+    <li>{{location}} - {{date}}</li>
+  {{else}}
+    <li>You don't have any workouts logged.</li>
+  {{/each}}
+</ul>

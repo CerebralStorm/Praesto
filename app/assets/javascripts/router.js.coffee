@@ -1,3 +1,6 @@
-Praesto.Router.map (match)->
-  # match('/').to('index')
+Praesto.Router.map ->
+  @resource 'workouts', ->
+    @route 'new'
+    @route 'workout', path: '/:workout_id'
+
 
