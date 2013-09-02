@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.ui.all
 //= require turbolinks
 //= require handlebars
 //= require ember
@@ -21,3 +22,4 @@
 Praesto = Ember.Application.create();
 
 //= require_tree .
+  

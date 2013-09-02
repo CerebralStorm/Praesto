@@ -6,4 +6,7 @@
 #= require_tree ./templates
 #= require_tree ./routes
 #= require ./router
+#= require ember-jquery-ui.js
 #= require_self
+
+

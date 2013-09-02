@@ -18,7 +18,7 @@ class WorkoutsController < ApplicationController
   end
 
   def destroy
-    respond_with Post.destroy(params[:id])
+    respond_with Workout.destroy(params[:id])
   end
 
   private

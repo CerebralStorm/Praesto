@@ -1,12 +1,22 @@
-<h2>Workouts</h2>
-{{outlet}}
-
-<h3>{{#linkTo "workouts.new"}}Log new workout{{/linkTo}}</h3>
-
-<ul>
-  {{#each workout in controller}}
-    <li>{{#linkTo "workouts.workout" workout}}{{workout.location}} - {{workout.date}}{{/linkTo}}</li>
-  {{else}}
-    <li>You don't have any workouts logged.</li>
-  {{/each}}
-</ul>
+<div class="row">
+  <div class="col-md-3">
+    <h2>Workouts</h2>
+    <ul>
+      {{#each workout in controller}}
+        <li>
+          <span>{{#linkTo "workouts.workout" workout}}{{workout.location}} - {{workout.date}}{{/linkTo}}</span>
+          <span><a href="#" {{action deleteWorkout workout}}>Delete</a></span>
+        </li>
+      {{else}}
+        <li>You don't have any workouts logged.</li>
+      {{/each}}
+    </ul>
+  </div>
+<div class="col-md-9">  
+  <form role="form">
+      Location: {{input type='text' value=location}}
+      Date: {{input type='date' value=date class="datepicker"}}
+      <button {{action createWorkout}}>Create Workout</button>
+  </form>
+  {{outlet}}    
+</div>
