@@ -1,1 +1,2 @@
-Praesto.ActivitesController = Ember.ArrayController.extend
+Praesto.ActivitiesController = Ember.ArrayController.extend
+  resourceType: "activity"
