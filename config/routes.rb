@@ -1,4 +1,5 @@
 Praesto::Application.routes.draw do
+  resources :activities
   resources :workouts
 
   root to: "static#index"
