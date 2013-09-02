@@ -14,8 +14,8 @@
   </div>
 <div class="col-md-9">  
   <form role="form">
-      Location: {{input type='text' value=location}}
-      Date: {{input type='date' value=date class="datepicker"}}
+      Location: {{input type='text' id="workoutLocation" value=location}}
+      Date: {{input type='date' id="workoutDate" value=date class="datepicker"}}
       <button {{action createWorkout}}>Create Workout</button>
   </form>
   {{outlet}}    

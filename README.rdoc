@@ -18,7 +18,8 @@ This is a workout app for competing with your friends on things like pushups, pu
   rake db:migrate
 
 * How to run the test suite
-  respec spec/
+  RAILS_ENV=test rails server
+  Then go to localhost:3000/qunit
 
 * Services (job queues, cache servers, search engines, etc.)
 

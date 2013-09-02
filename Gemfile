@@ -11,7 +11,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'ember-rails'
 gem 'ember-source'
-gem 'jquery-ui-rails'
+gem 'qunit-rails'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
