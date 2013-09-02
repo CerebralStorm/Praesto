@@ -8,7 +8,5 @@ Praesto.WorkoutsWorkoutController = Ember.ObjectController.extend
     @set('isEditing', false)
 
   updateWorkout: (workout) ->
-    date = new Date(workout._data.attributes.date)
-    workout._data.attributes.date = date
     workout.save()
 

@@ -3,7 +3,6 @@ Praesto.WorkoutsController = Ember.ArrayController.extend
   createWorkout: ->
     location = @get('location')
     date = @get('date')
-    date = new Date(date)
     workout = Praesto.Workout.createRecord(
       location: location
       date: date
