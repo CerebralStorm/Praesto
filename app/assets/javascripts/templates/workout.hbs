@@ -1,0 +1,25 @@
+<h3>Workout</h3>
+{{#if isEditing}}
+  <button {{action closeEdit}}>Cancel</button>
+{{else}}
+  <button {{action openEdit}}>Edit</button>
+{{/if}}
+<p>Location: 
+  {{#if isEditing}}
+    {{input type='text' value=location}}
+  {{else}}
+    {{location}}
+  {{/if}}
+</p>
+<p>Date: 
+  {{#if isEditing}}
+    {{input type='date' value=date}}
+  {{else}}
+    {{date}}
+  {{/if}}
+</p>
+<p>
+  {{#if isEditing}}
+    <button {{action updateWorkout this}}>Save</button>
+  {{/if}}
+</p>

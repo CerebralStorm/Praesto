@@ -4,7 +4,7 @@
     <ul>
       {{#each workout in controller}}
         <li>
-          <span>{{#linkTo "workouts.workout" workout}}{{workout.location}} - {{workout.date}}{{/linkTo}}</span>
+          <span>{{#linkTo "workout" workout}}{{workout.location}} - {{workout.date}}{{/linkTo}}</span>
           <span><a href="#" {{action deleteWorkout workout}}>Delete</a></span>
         </li>
       {{else}}

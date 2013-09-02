@@ -1,6 +1,6 @@
 Praesto.Router.map ->
   @resource 'workouts', ->
-    @route 'workout', path: '/:workout_id'
+    @resource 'workout', path: '/:workout_id'
 
 
 Praesto.WorkoutsRoute = Ember.Route.extend

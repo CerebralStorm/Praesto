@@ -1,4 +1,4 @@
-Praesto.WorkoutsWorkoutController = Ember.ObjectController.extend
+Praesto.WorkoutController = Ember.ObjectController.extend
   isEditing: false
 
   openEdit: ->
@@ -8,5 +8,6 @@ Praesto.WorkoutsWorkoutController = Ember.ObjectController.extend
     @set('isEditing', false)
 
   updateWorkout: (workout) ->
+    @set('isEditing', false)
     workout.save()
 

@@ -1,5 +1,4 @@
 Praesto.WorkoutsController = Ember.ArrayController.extend
-  resourceType: 'workout'
   createWorkout: ->
     location = @get('location')
     date = @get('date')
@@ -7,6 +6,9 @@ Praesto.WorkoutsController = Ember.ArrayController.extend
       location: location
       date: date
     )
+    workout.save()
+
+  updateWorkout: (workout) ->
     workout.save()
 
   deleteWorkout: (workout) ->
