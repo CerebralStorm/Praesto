@@ -25,4 +25,40 @@
 </p>
 {{controller}}
 {{model}}
+<form role="form">
+  <p>
+    {{#if isStrength}}
+      <img src="assets/strength-icon-selected.png" {{action select "strength"}}></img>
+    {{else}}
+      <img src="assets/strength-icon.png" {{action select "strength"}}></img>
+    {{/if}}
+
+    {{#if isEndurance}}
+      <img src="assets/endurance-icon-selected.png" {{action select "endurance"}}></img>
+    {{else}}
+      <img src="assets/endurance-icon.png" {{action select "endurance"}}></img>
+    {{/if}}
+
+    {{#if isBalance}}
+      <img src="assets/balance-flex-icon-selected.png" {{action select "balance"}}></img>
+    {{else}}
+      <img src="assets/balance-flex-icon.png" {{action select "balance"}}></img>
+    {{/if}}
+  </p>
+  <p>
+    Name: {{input type='text' id="activityName" value=name}}
+    {{#if isStrength}}
+        Sets: {{input type='text' id="activitySets" value=sets}}
+        Reps: {{input type='text' id="activityType" value=reps}}
+    {{/if}}
+    {{#if isEndurance}}
+        Duration: {{input type='text' id="activityDuration" value=duration}}
+        Distance: {{input type='text' id="activityDistance" value=distance}}
+    {{/if}}
+    {{#if isBalance}}
+        Duration: {{input type='text' id="activityDuration" value=duration}}
+    {{/if}}
+  </p>
+      <button {{action addActivity}}>Add Activity</button>
+  </form>
 {{render "activities" activities}}

@@ -1,9 +1,5 @@
 <h4>Activities</h4>
 <ul>
-  <form role="form">
-      Name: {{input type='text' id="activityName" value=name}}
-      <button {{action createWorkout}}>Create Workout</button>
-  </form>
   {{#each activity in controller}}
     <li>{{ activity.name }}</li>
   {{else}}

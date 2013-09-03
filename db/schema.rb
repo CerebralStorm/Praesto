@@ -20,6 +20,11 @@ ActiveRecord::Schema.define(version: 20130902063022) do
   create_table "activities", force: true do |t|
     t.integer  "workout_id"
     t.string   "name"
+    t.string   "activity_type"
+    t.integer  "reps"
+    t.integer  "sets"
+    t.float    "duration"
+    t.float    "distance"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
